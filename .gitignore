@@ -1,0 +1,7 @@
+# Ignore generated files
+build/
+Manifest.java
+R.java
+
+# Ignore local folders begining with __
+__*/
