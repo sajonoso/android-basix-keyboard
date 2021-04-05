@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.softkeyboard;
+package com.nil3.basixkeyboard;
 
 import android.content.Context;
 import android.content.res.Resources;
