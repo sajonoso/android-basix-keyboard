@@ -71,7 +71,8 @@ public class SoftKeyboard extends InputMethodService
     private LatinKeyboard mSymbolsKeyboard;
     private LatinKeyboard mSymbolsShiftedKeyboard;
     private LatinKeyboard mQwertyKeyboard;
-    
+    private LatinKeyboard mNumericKeyboard;
+
     private LatinKeyboard mCurKeyboard;
     
     private String mWordSeparators;
@@ -102,6 +103,7 @@ public class SoftKeyboard extends InputMethodService
         mQwertyKeyboard = new LatinKeyboard(this, R.xml.qwerty);
         mSymbolsKeyboard = new LatinKeyboard(this, R.xml.symbols);
         mSymbolsShiftedKeyboard = new LatinKeyboard(this, R.xml.symbols_shift);
+        mNumericKeyboard = new LatinKeyboard(this, R.xml.numeric);
     }
     
     /**
@@ -158,13 +160,15 @@ public class SoftKeyboard extends InputMethodService
             case InputType.TYPE_CLASS_DATETIME:
                 // Numbers and dates default to the symbols keyboard, with
                 // no extra features.
-                mCurKeyboard = mSymbolsKeyboard;
+                // mCurKeyboard = mSymbolsKeyboard;
+                mCurKeyboard = mNumericKeyboard;
                 break;
                 
             case InputType.TYPE_CLASS_PHONE:
                 // Phones will also default to the symbols keyboard, though
                 // often you will want to have a dedicated phone keyboard.
-                mCurKeyboard = mSymbolsKeyboard;
+                // mCurKeyboard = mSymbolsKeyboard;
+                mCurKeyboard = mNumericKeyboard;
                 break;
                 
             case InputType.TYPE_CLASS_TEXT:
