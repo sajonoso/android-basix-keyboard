@@ -177,7 +177,7 @@ public class SoftKeyboard extends InputMethodService
                 // be doing predictive text (showing candidates as the
                 // user types).
                 mCurKeyboard = mQwertyKeyboard;
-                mPredictionOn = true;
+                // mPredictionOn = true;
                 
                 // We now look for a few special variations of text that will
                 // modify our behavior.
@@ -204,7 +204,7 @@ public class SoftKeyboard extends InputMethodService
                     // candidates when in fullscreen mode, otherwise relying
                     // own it displaying its own UI.
                     mPredictionOn = false;
-                    mCompletionOn = isFullscreenMode();
+                    // mCompletionOn = isFullscreenMode();
                 }
                 
                 // We also want to look at the current state of the editor
